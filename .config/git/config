@@ -1,0 +1,11 @@
+[user]
+	email = gurtej@mit.edu
+	name = Gurtej Kanwar
+[push]
+	default = simple
+[core]
+	editor = emacs -nw
+[credential]
+	helper = store
+[pull]
+	rebase = true
