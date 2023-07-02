@@ -28,9 +28,9 @@ shopt -s checkwinsize
 ### Colors
 # color prompt
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+  PS1='\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+  PS1='\h:\W\$ '
 fi
 
 # enable color support of ls and also add handy aliases
