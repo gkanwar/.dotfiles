@@ -10,4 +10,10 @@ function config() {
 }
 config checkout
 config config --local status.showUntrackedFiles no
-
+if [[ ! -f "${HOME}/.machine" ]]; then
+  echo "Creating .machine file"
+  read -p "Enter arch [osx/linux]: " arch
+  read -p "Enter machine name: " machine
+  echo "export ARCH=\"${arch}\"" >> ${HOME}/.machine
+  echo "export MACHINE=\"${machine}\"" >> ${HOME}/.machine
+fi
