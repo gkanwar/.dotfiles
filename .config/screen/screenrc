@@ -1,0 +1,4 @@
+shell -$SHELL
+escape ^Qq
+startup_message off
+caption always "%{= kc}Screen session on %H %+032=%{= .w}%w %-28=%{= .m}%D %d.%m.%Y %0c"

@@ -78,6 +78,8 @@ export XDG_STATE_HOME=${HOME}/.local/state
 mkdir -p ${XDG_CONFIG_HOME}
 mkdir -p ${XDG_DATA_HOME}
 mkdir -p ${XDG_STATE_HOME}
+# Make other stuff respect XDG dirs
+export SCREENRC=${HOME}/.config/screen/screenrc
 # Home prefix
 export PATH=${PATH}:${HOME}/.local/bin
 export CPATH=${CPATH}:${HOME}/.local/include
