@@ -16,7 +16,7 @@ HISTSIZE=10000
 HISTFILESIZE=10000
 shopt -s histappend
 PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
-if [[ "${ARCH}" == "OSX" ]]; then
+if [[ "${ARCH}" == "osx" ]]; then
   SHELL_SESSION_HISTORY=1
 fi
 
@@ -75,6 +75,9 @@ fi
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_STATE_HOME=${HOME}/.local/state
+mkdir -p ${XDG_CONFIG_HOME}
+mkdir -p ${XDG_DATA_HOME}
+mkdir -p ${XDG_STATE_HOME}
 # Home prefix
 export PATH=${PATH}:${HOME}/.local/bin
 export CPATH=${CPATH}:${HOME}/.local/include
@@ -106,7 +109,9 @@ export PYTHONPATH=${PYTHONPATH}:${HOME}/LQFTflow
 export PYTHONPATH=${PYTHONPATH}:${HOME}/lqft-flow-2
 
 # Set up environment modules
-install /usr/share/modules/init/bash
+if [[ -e "/usr/share/modules/init/bash" ]]; then
+  source "/usr/share/modules/init/bash"
+fi
 
 # Manual conda init stuff so this works across machines
 if [ -f "${HOME}/miniconda3/etc/profile.d/conda.sh" ]; then
