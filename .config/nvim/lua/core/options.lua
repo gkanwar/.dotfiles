@@ -18,6 +18,10 @@ vim.opt.wrap = true
 -- Navigation
 vim.opt.scrolloff = 8
 
+-- Tab completion
+vim.opt.wildmode = 'longest:full'
+vim.opt.wildmenu = true
+
 -- Backup / undo state
 vim.opt.swapfile = false
 vim.opt.backup = false
