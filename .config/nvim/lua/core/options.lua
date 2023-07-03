@@ -3,9 +3,10 @@ vim.opt.guicursor = ''
 vim.opt.virtualedit = { 'block', 'onemore' }
 vim.opt.mouse = ''
 
--- Line numbers
+-- Line numbers / sign column
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.signcolumn = 'yes'
 
 -- Tabs / indent / wrap
 vim.opt.tabstop = 2

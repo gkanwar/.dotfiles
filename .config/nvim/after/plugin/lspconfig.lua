@@ -5,7 +5,8 @@ lspconfig.lua_ls.setup {
     Lua = {
       runtime = { version = 'LuaJIT' },
       diagnostics = { globals = 'vim' },
-      telemetry = { enable = false }
+      telemetry = { enable = false },
     }
   }
 }
+lspconfig.ccls.setup {}
