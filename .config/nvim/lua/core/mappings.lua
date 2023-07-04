@@ -8,8 +8,8 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
 -- Inserting lines
-vim.keymap.set('n', 'o', 'o<Esc>0"_D')
-vim.keymap.set('n', 'O', 'O<Esc>0"_D')
+-- vim.keymap.set('n', 'o', 'o<Esc>0"_D')
+-- vim.keymap.set('n', 'O', 'O<Esc>0"_D')
 vim.keymap.set('n', 'zj', 'o<Esc>k')
 vim.keymap.set('n', 'zk', 'O<Esc>j')
 
