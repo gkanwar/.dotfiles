@@ -126,6 +126,8 @@ elif [ -f "/optext/anaconda3/etc/profile.d/conda.sh" ]; then
     . "/optext/anaconda3/etc/profile.d/conda.sh"
 elif [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
     . "/opt/anaconda3/etc/profile.d/conda.sh"
+elif [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+    . "/opt/miniconda3/etc/profile.d/conda.sh"
 fi
 
 # Haskell
