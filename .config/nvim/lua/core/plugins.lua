@@ -30,7 +30,24 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'
   }
   use 'nvim-treesitter/nvim-treesitter-context'
-  use 'neovim/nvim-lspconfig'
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- lsp support
+      {'neovim/nvim-lspconfig'},
+      -- autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'L3MON4D3/LuaSnip'},
+    }
+  }
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()
