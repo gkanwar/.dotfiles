@@ -20,5 +20,14 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '$', '$l')
 
+-- Windows
+vim.keymap.set('n', ',h', ':split<CR>')
+vim.keymap.set('n', ',v', ':split<CR>')
+vim.keymap.set('n', ',x', ':close<CR>')
+vim.keymap.set('n', '<leader>h', '<C-w>h')
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')
+vim.keymap.set('n', '<leader>l', '<C-w>l')
+
 -- Search
-vim.keymap.set('n', '<Esc>', ':noh<CR><Esc>')
+vim.keymap.set('n', '<Esc>', ':noh<Bar>:echo<CR><Esc>')

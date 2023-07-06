@@ -10,6 +10,8 @@ nvim_lua.settings.Lua.telemetry.enable = false
 lspconfig.lua_ls.setup(nvim_lua)
 -- c/c++
 lspconfig.ccls.setup {}
+-- ocaml
+lspconfig.ocamllsp.setup {}
 
 local cmp = require('cmp')
 cmp.setup {
