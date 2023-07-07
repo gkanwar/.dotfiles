@@ -21,8 +21,8 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 vim.keymap.set('n', '$', '$l')
 
 -- Windows
-vim.keymap.set('n', ',h', ':split<CR>')
-vim.keymap.set('n', ',v', ':vsplit<CR>')
+vim.keymap.set('n', ',h', ':vsplit<CR>')
+vim.keymap.set('n', ',v', ':split<CR>')
 vim.keymap.set('n', ',x', ':close<CR>')
 vim.keymap.set('n', '<leader>h', '<C-w>h')
 vim.keymap.set('n', '<leader>j', '<C-w>j')
