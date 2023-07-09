@@ -48,6 +48,12 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
   }
+  use {
+    'kylechui/nvim-surround',
+    config = function()
+      require('nvim-surround').setup()
+    end
+  }
 
   if packer_bootstrap then
     require('packer').sync()
