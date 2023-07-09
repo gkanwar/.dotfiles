@@ -1,5 +1,4 @@
 -- Cursor
-vim.opt.guicursor = ''
 vim.opt.virtualedit = { 'block', 'onemore' }
 vim.opt.mouse = ''
 

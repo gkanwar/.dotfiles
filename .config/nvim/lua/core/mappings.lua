@@ -18,7 +18,14 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
-vim.keymap.set('n', '$', '$l')
+vim.keymap.set('n', '#', function()
+  local r = vim.api.nvim_win_get_cursor(0)[1]
+  local lines = vim.api.nvim_buf_get_lines(0, r-1, r, false)
+  if #lines ~= 1 then
+    return
+  end
+  vim.api.nvim_win_set_cursor(0, {r, #lines[1]})
+end)
 
 -- Windows
 vim.keymap.set('n', ',h', ':vsplit<CR>')
