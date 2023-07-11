@@ -39,24 +39,24 @@
    ((class color) (min-colors #xFF)))           ; col 2 Xterm/256
 
   ;; Define our color palette
-  (highlight-high   "#524f67" "#d7d7ff")
-  (highlight-med    "#403d52" "#d7d7ff")
-  (highlight-low    "#21202E" "#d7d7ff")
+  (highlight-high   "#524f67" "#606060")
+  (highlight-med    "#403d52" "#606060")
+  (highlight-low    "#21202E" "#606060")
   (iris             "#c4a7e7" "#d7d7ff")
   (foam             "#9ccfd8" "#00d7ff")
   (foam-low         "#272B37" "#00d7ff")
   (pine             "#31748f" "#afffff")
-  (rose             "#ebbcba" "#ffffff")
-  (rose-low         "#302935" "#ffffff")
-  (gold             "#f6c177" "#ffd7af")
-  (gold-low         "#312A2E" "#ffd7af")
-  (love             "#eb6f92" "#ff87af")
+  (rose             "#ebbcba" "#ffd7d7")
+  (rose-low         "#302935" "#ffd7d7")
+  (gold             "#f6c177" "#ffff00")
+  (gold-low         "#312A2E" "#ffff00")
+  (love             "#eb6f92" "#ff00ff")
   (text             "#e0def4" "#ffffff")
   (subtle           "#908caa" "#ffffff")
-  (muted            "#6e6a86" "#ffffff")
-  (overlay          "#26233a" "#ffffff")
-  (surface          "#1F1D2E" "#ffffff")
-  (base             "#191724" "#ffffff")
+  (muted            "#6e6a86" "#808080")
+  (overlay          "#26233a" "#303030")
+  (surface          "#1F1D2E" "#202020")
+  (base             "#191724" "#000000")
   (ex               "#16141f" "#F00000"))
 
  ;; Customize faces
@@ -567,7 +567,7 @@
 
  ))
 
-;;;###autoload
+;;; autoload
 (and load-file-name
      (boundp 'custom-theme-load-path)
      (add-to-list 'custom-theme-load-path
