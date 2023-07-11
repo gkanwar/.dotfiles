@@ -1,3 +1,5 @@
-if($ENV{'ARCH'} == "osx") {
+if($ENV{'ARCH'} eq 'osx') {
   $pdf_previewer = 'open -a Skim';
 }
+
+$pdflatex = 'pdflatex -interaction=nonstopmode'
