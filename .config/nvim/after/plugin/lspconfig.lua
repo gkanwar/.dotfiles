@@ -12,6 +12,8 @@ lspconfig.lua_ls.setup(nvim_lua)
 lspconfig.ccls.setup {}
 -- ocaml
 lspconfig.ocamllsp.setup {}
+-- latex
+lspconfig.texlab.setup {}
 
 local cmp = require('cmp')
 cmp.setup {
