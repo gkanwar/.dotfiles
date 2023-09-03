@@ -42,6 +42,7 @@
 
 ;; File extensions
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . c++-mode))
 
 ;; Tell emacs to alias us-ascii to ascii
 (define-coding-system-alias 'ascii 'us-ascii)
