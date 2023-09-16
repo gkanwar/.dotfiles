@@ -28,5 +28,6 @@ colors:
 key_bindings:
   # mimick my nvim binding
   - { key: Return, mods: Shift, chars: "\e" }
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
 
 import: ["~/.config/alacritty/rose-pine.yml"]
