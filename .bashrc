@@ -130,6 +130,9 @@ elif [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
     . "/opt/miniconda3/etc/profile.d/conda.sh"
 fi
 
+# Homebrew
+PATH=${PATH}:/opt/homebrew/bin
+
 # Haskell
 if [[ -f ${HOME}/.ghcup/env ]]; then
     source ${HOME}/.ghcup/env
