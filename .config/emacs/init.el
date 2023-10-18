@@ -67,3 +67,6 @@
 
 ;; Typescript Mode
 (straight-use-package 'typescript-mode)
+
+;; CMake Mode
+(straight-use-package 'cmake-mode)
