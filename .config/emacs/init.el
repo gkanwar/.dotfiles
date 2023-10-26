@@ -2,6 +2,9 @@
 (setq line-number-mode t)
 (setq column-number-mode t)
 
+;; Disable menu bar
+(menu-bar-mode -1)
+
 ;; Stop throwing me to EOF
 (global-set-key (kbd "<home>") 'beginning-of-line)
 (global-set-key (kbd "<end>") 'end-of-line)
