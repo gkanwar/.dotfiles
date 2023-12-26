@@ -73,3 +73,6 @@
 
 ;; CMake Mode
 (straight-use-package 'cmake-mode)
+
+;; Dockerfile Mode
+(straight-use-package 'dockerfile-mode)
