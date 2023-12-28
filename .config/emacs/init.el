@@ -76,3 +76,6 @@
 
 ;; Dockerfile Mode
 (straight-use-package 'dockerfile-mode)
+
+;; JS Mode
+(setq js-indent-level 2)
