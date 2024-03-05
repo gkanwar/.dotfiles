@@ -1,3 +1,7 @@
+;; Edit this config
+(defun edit-config ()
+  (interactive) (find-file user-init-file))
+
 ;; Line number mode
 (setq line-number-mode t)
 (setq column-number-mode t)
