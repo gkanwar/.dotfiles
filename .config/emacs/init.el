@@ -40,10 +40,24 @@
 (load-file (expand-file-name "themes/rose-pine-theme.el" user-emacs-directory))
 (load-theme 'rose-pine t)
 
-;; flymake
+;; Eglot
+(with-eval-after-load 'eglot
+  (add-to-list
+   'eglot-server-programs
+   '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd")))
+  (add-to-list
+   'eglot-server-programs
+   '((rust-mode) . ("rust-analyzer")))
+)
+
+;; Flymake
 (require 'flymake)
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
+(set-face-attribute
+ 'flymake-error nil :foreground "firebrick" :underline t)
+(set-face-attribute
+ 'flymake-warning nil :foreground "goldenrod" :underline t)
 
 ;; Google C++ Style (with namespace fix)
 (load-file (expand-file-name "google-c-style.el" user-emacs-directory))
