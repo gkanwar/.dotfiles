@@ -18,7 +18,32 @@
 ;; Don't make backup files
 (setq make-backup-files nil)
 
-;; Package manager
+;;; Built-in packages
+;; eldoc
+(setq eldoc-echo-area-use-multiline-p nil)
+
+;; flymake
+(require 'flymake)
+(define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
+(define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
+(set-face-attribute
+ 'flymake-error nil :foreground "firebrick" :underline t)
+(set-face-attribute
+ 'flymake-warning nil :foreground "goldenrod" :underline t)
+(set-face-attribute
+ 'flymake-note nil :foreground "greenyellow"
+ :underline '(:color foreground-color :style wave :position nil))
+
+;; eglot
+(require 'eglot)
+(add-to-list 'eglot-server-programs '(rust-mode . ("rust-analyzer")))
+(add-to-list
+ 'eglot-server-programs
+ '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd")))
+(add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
+(set-face-attribute 'eglot-diagnostic-tag-unnecessary-face nil :underline t)
+
+;;; Package manager
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
@@ -39,25 +64,6 @@
 (straight-use-package 'autothemer)
 (load-file (expand-file-name "themes/rose-pine-theme.el" user-emacs-directory))
 (load-theme 'rose-pine t)
-
-;; Eglot
-(with-eval-after-load 'eglot
-  (add-to-list
-   'eglot-server-programs
-   '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd")))
-  (add-to-list
-   'eglot-server-programs
-   '((rust-mode) . ("rust-analyzer")))
-)
-
-;; Flymake
-(require 'flymake)
-(define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
-(define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
-(set-face-attribute
- 'flymake-error nil :foreground "firebrick" :underline t)
-(set-face-attribute
- 'flymake-warning nil :foreground "goldenrod" :underline t)
 
 ;; Google C++ Style (with namespace fix)
 (load-file (expand-file-name "google-c-style.el" user-emacs-directory))
