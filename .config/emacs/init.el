@@ -36,9 +36,16 @@
 (load-file (expand-file-name "themes/rose-pine-theme.el" user-emacs-directory))
 (load-theme 'rose-pine t)
 
+;; flymake
+(require 'flymake)
+(define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
+(define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
+
 ;; Google C++ Style (with namespace fix)
 (load-file (expand-file-name "google-c-style.el" user-emacs-directory))
 (add-hook 'c-mode-common-hook 'google-set-c-style)
+;; C++ style comments
+(add-hook 'c-mode-hook (lambda () (c-toggle-comment-style -1)))
 
 ;; YAML Mode
 (load-file (expand-file-name "yaml-mode.el" user-emacs-directory))
