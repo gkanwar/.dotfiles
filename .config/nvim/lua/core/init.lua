@@ -1,5 +1,6 @@
 require('core.options')
 require('core.cd')
+require('core.highlight')
 require('core.mappings')
 require('core.plugins')
 require('core.lsp')

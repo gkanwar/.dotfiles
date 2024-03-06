@@ -15,6 +15,7 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'nvim-tree/nvim-web-devicons'
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -51,6 +52,14 @@ return require('packer').startup(function(use)
     'kylechui/nvim-surround',
     config = function()
       require('nvim-surround').setup()
+    end
+  }
+  use {
+    'hedyhli/outline.nvim',
+    config = function()
+      vim.keymap.set('n', '<leader>o', '<cmd>Outline<CR>',
+      { desc = 'Toggle outline' })
+      require('outline').setup()
     end
   }
   use 'lervag/vimtex'
