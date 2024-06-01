@@ -110,3 +110,6 @@
 
 ;; JS Mode
 (setq js-indent-level 2)
+
+;; Zig Mode
+(straight-use-package 'zig-mode)
