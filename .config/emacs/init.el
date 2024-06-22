@@ -20,7 +20,9 @@
 
 ;;; Built-in packages
 ;; eldoc
+(require 'eldoc)
 (setq eldoc-echo-area-use-multiline-p nil)
+(global-set-key (kbd "M-i") 'eldoc-print-current-symbol-info)
 
 ;; flymake
 (require 'flymake)
@@ -36,6 +38,7 @@
 
 ;; eglot
 (require 'eglot)
+(define-key eglot-mode-map (kbd "M-r") 'eglot-rename)
 (add-to-list 'eglot-server-programs '(rust-mode . ("rust-analyzer")))
 (add-to-list
  'eglot-server-programs
