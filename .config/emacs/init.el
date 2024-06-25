@@ -116,3 +116,6 @@
 
 ;; Zig Mode
 (straight-use-package 'zig-mode)
+
+;; WGSL Mode
+(straight-use-package 'wgsl-mode)
