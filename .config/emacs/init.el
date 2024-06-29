@@ -122,3 +122,6 @@
 
 ;; GLSL Mode
 (straight-use-package 'glsl-mode)
+
+;; Haskell Mode
+(straight-use-package 'haskell-mode)
