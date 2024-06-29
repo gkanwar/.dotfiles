@@ -119,3 +119,6 @@
 
 ;; WGSL Mode
 (straight-use-package 'wgsl-mode)
+
+;; GLSL Mode
+(straight-use-package 'glsl-mode)
