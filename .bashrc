@@ -151,3 +151,6 @@ export PIXELS_HIGH_PERF=1
 if [[ -r ${HOME}/.opam/opam-init/init.sh ]]; then
   source ${HOME}/.opam/opam-init/init.sh
 fi
+
+# Flutter
+PATH=${PATH}:${HOME}/Software/flutter/bin

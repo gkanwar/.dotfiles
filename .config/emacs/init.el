@@ -125,3 +125,6 @@
 
 ;; Haskell Mode
 (straight-use-package 'haskell-mode)
+
+;; Dart Mode
+(straight-use-package 'dart-mode)
