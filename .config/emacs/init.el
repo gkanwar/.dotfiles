@@ -45,6 +45,7 @@
  '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd")))
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
 (set-face-attribute 'eglot-diagnostic-tag-unnecessary-face nil :underline t)
+(add-to-list 'eglot-ignored-server-capabilities :documentOnTypeFormattingProvider)
 
 ;;; Package manager
 (defvar bootstrap-version)
