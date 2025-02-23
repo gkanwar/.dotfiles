@@ -129,3 +129,10 @@
 
 ;; Dart Mode
 (straight-use-package 'dart-mode)
+
+;; Steel Mode
+(when (load (expand-file-name "steel-mode.el" user-emacs-directory) t)
+  (define-key steel-mode-map (kbd "C-c x") 'treesit-explore-mode))
+
+;; More highlighting!
+(setq treesit-font-lock-level 4)
