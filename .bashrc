@@ -144,6 +144,9 @@ if [[ -f ${HOME}/.cargo/env ]]; then
 fi
 export PATH=${HOME}/.cargo/bin:${PATH}
 
+# Lean
+export PATH=${HOME}/.elan/bin:${PATH}
+
 # Rust "pixels" library
 export PIXELS_HIGH_PERF=1
 
