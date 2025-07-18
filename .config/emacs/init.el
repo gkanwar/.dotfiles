@@ -136,3 +136,4 @@
 
 ;; More highlighting!
 (setq treesit-font-lock-level 4)
+(put 'upcase-region 'disabled nil)
