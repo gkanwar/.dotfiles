@@ -26,6 +26,10 @@
 
 ;; flymake
 (require 'flymake)
+(setq flymake-fringe-indicator-position nil)
+(setq flymake-margin-indicator-position nil)
+(setq flymake-indicator-type nil)
+(setq flymake-no-changes-timeout 0.5)
 (define-key flymake-mode-map (kbd "M-n") 'flymake-goto-next-error)
 (define-key flymake-mode-map (kbd "M-p") 'flymake-goto-prev-error)
 (set-face-attribute
@@ -38,6 +42,7 @@
 
 ;; eglot
 (require 'eglot)
+(setq eglot-report-progress nil)
 (define-key eglot-mode-map (kbd "M-r") 'eglot-rename)
 (add-to-list 'eglot-server-programs '(rust-mode . ("rust-analyzer")))
 (add-to-list
