@@ -14,6 +14,7 @@
 (global-set-key (kbd "<end>") 'end-of-line)
 
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 ;; Don't make backup files
 (setq make-backup-files nil)
@@ -48,6 +49,7 @@
 (add-to-list
  'eglot-server-programs
  '((c-mode c-ts-mode c++-mode c++-ts-mode objc-mode) . ("clangd")))
+(add-to-list 'eglot-server-programs '(python-mode . ("ty" "server")))
 (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
 (set-face-attribute 'eglot-diagnostic-tag-unnecessary-face nil :underline t)
 (add-to-list 'eglot-ignored-server-capabilities :documentOnTypeFormattingProvider)
