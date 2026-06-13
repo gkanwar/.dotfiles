@@ -19,6 +19,9 @@
 ;; Don't make backup files
 (setq make-backup-files nil)
 
+;; Don't track vc
+(setq vc-handled-backends nil)
+
 ;;; Built-in packages
 ;; eldoc
 (require 'eldoc)
