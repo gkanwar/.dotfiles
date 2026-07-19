@@ -1,0 +1,13 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+plan_mode_reasoning_effort = "xhigh"
+
+[projects."/Users/gkanwar/projects/sqed-flow"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/deforms_talk"]
+trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4

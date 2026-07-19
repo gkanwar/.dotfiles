@@ -1,0 +1,44 @@
+personality = "pragmatic"
+approvals_reviewer = "user"
+
+[projects."/Users/gkanwar/projects/lqft-flow-2"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/scalar_multilevel"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/o3-diffusion"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/cpn"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/lqft-flow-fh/free_complex_scalar"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/o3-complex-momenta"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/ns-sun-analysis"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/annealing-work"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/spin-deformations"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/test-gpt-oss"]
+trust_level = "trusted"
+
+[features]
+memories = false
+multi_agent = false
+
+[model_providers.vllm]
+name = "vLLM"
+base_url = "http://localhost:8765/v1"
+wire_api = "responses"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
