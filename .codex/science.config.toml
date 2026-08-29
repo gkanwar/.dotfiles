@@ -8,6 +8,15 @@ trust_level = "trusted"
 [projects."/Users/gkanwar/projects/deforms_talk"]
 trust_level = "trusted"
 
+[projects."/home/gkanwar/projects/lqft-flow-2"]
+trust_level = "trusted"
+
+[projects."/home/gkanwar/projects/o3-complex-momenta"]
+trust_level = "trusted"
+
+[projects."/home/gkanwar/projects/spin-deforms-penalty"]
+trust_level = "trusted"
+
 [tui.model_availability_nux]
 "gpt-5.5" = 4
 "gpt-5.6-sol" = 4
