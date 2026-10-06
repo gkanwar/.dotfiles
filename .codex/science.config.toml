@@ -2,6 +2,10 @@ model = "gpt-6-sol"
 model_reasoning_effort = "medium"
 plan_mode_reasoning_effort = "xhigh"
 
+[tui]
+terminal_title = ["app-name", "run-state"]
+screen_reader_detection_done = true
+
 [projects."/Users/gkanwar/projects/sqed-flow"]
 trust_level = "trusted"
 
@@ -23,14 +27,41 @@ trust_level = "trusted"
 [projects."/Users/gkanwar/projects/spin-deforms-pernalty"]
 trust_level = "trusted"
 
-[tui]
-terminal_title = ["project-name", "app-name"]
-fullscreen_transcript = true
+[projects."/Users/gkanwar/projects/cpn_demo/v1_vibe"]
+trust_level = "trusted"
 
-[tui.model_availability_nux]
-"gpt-5.5" = 4
-"gpt-5.6-sol" = 4
-"gpt-6.1-sol" = 2
+[projects."/Users/gkanwar/projects/cpn_demo/v2_plan"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/tmp"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/o3-blocked-xcheck"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/multilevel_mcmc"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/lqft-flow-genfunc-diffusion"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/tmp2"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/yqed-flow"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/projects/gkanwar-demos"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/papers/anneal_diff_prd_2026"]
+trust_level = "trusted"
+
+[projects."/Users/gkanwar/papers/complex_mom_jhep_2026"]
+trust_level = "trusted"
 
 [notice.model_migrations]
 "gpt-5.4" = "gpt-5.6-terra"
