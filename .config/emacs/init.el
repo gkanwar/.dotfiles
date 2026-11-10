@@ -140,6 +140,9 @@
 ;; Dart Mode
 (straight-use-package 'dart-mode)
 
+;; Odin Mode
+(straight-use-package '(odin-mode :type git :host github :repo "mattt-b/odin-mode"))
+
 ;; Steel Mode
 (when (load (expand-file-name "steel-mode.el" user-emacs-directory) t)
   (define-key steel-mode-map (kbd "C-c x") 'treesit-explore-mode))
