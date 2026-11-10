@@ -2,6 +2,21 @@ model = "gpt-6-sol"
 model_reasoning_effort = "medium"
 plan_mode_reasoning_effort = "xhigh"
 
+### GPUs
+approval_policy = "on-request"
+default_permissions = "gpu_restricted"
+
+[permissions.gpu_restricted]
+description = "Workspace write access with minimal GPU hardware exposure"
+extends = ":workspace"
+
+[permissions.gpu_restricted.filesystem]
+"/dev/nvidiactl" = "read"
+"/dev/nvidia-uvm" = "read"
+"/dev/nvidia-uvm-tools" = "read"
+"/dev/nvidia0" = "read"
+"/proc/driver/nvidia" = "read"
+
 [tui]
 terminal_title = ["app-name", "run-state"]
 screen_reader_detection_done = true
@@ -61,6 +76,12 @@ trust_level = "trusted"
 trust_level = "trusted"
 
 [projects."/Users/gkanwar/papers/complex_mom_jhep_2026"]
+trust_level = "trusted"
+
+[projects."/home/gkanwar/projects/o3-diffusion"]
+trust_level = "trusted"
+
+[projects."/home/gkanwar/projects/edi_ai_capmap"]
 trust_level = "trusted"
 
 [notice.model_migrations]
