@@ -157,3 +157,6 @@ fi
 
 # Flutter
 PATH=${PATH}:${HOME}/Software/flutter/bin
+
+# Claude Code
+export CLAUDE_CODE_DISABLE_MOUSE_CLICKS=1
